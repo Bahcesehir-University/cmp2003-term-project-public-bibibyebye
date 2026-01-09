@@ -1,4 +1,3 @@
-#pragma once
 #include <vector> // include for std::vector
 #include <string> // include for std::string
 #include <unordered_map> // include for std::unordered_map
@@ -28,3 +27,4 @@ public:
 private:
     std::unordered_map<unsigned long long, ZoneData> zoneMap; // store zone data using hashed zone name as key (use number instead of string)
 };
+

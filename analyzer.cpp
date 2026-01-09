@@ -221,7 +221,8 @@ std::vector<SlotCount> TripAnalyzer::topBusySlots(int k) const { // function for
 
                 if ((int)pq.size() < k) { // // check if priority queue has fewer than k elements
                     pq.push(item); // insert item into priority queue
-                } else { // run if priority queue already has k elements
+                }
+                else { // run if priority queue already has k elements
                     if (comp(item, pq.top())) { // check comparison of new zone with weakest in queue and if new better:
                         pq.pop(); // remove lowest from queue
                         pq.push(item); // add new zone to queue
@@ -241,3 +242,4 @@ std::vector<SlotCount> TripAnalyzer::topBusySlots(int k) const { // function for
     std::reverse(results.begin(), results.end()); // reverse results order since priority queue gives from lowest to highest
 
     return results; // return sorted list of top k combinations
+}
